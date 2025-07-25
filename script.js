@@ -13,7 +13,7 @@ const products = [
   {
     name: "Orange Semi paithani silk saree",
     price: "₹1,699",
-    image: "https://i.postimg.cc/V69fRW9v/Untitled-design.png,"
+    image: "https://i.postimg.cc/V69fRW9v/Untitled-design.png",
   }, 
    
   {
