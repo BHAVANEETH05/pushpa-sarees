@@ -151,3 +151,48 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+/* Sidebar toggle button */
+#sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 15px;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* Sidebar styles */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 220px;
+  height: 100%;
+  background-color: #d027ab;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+#sidebar a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#sidebar a:hover {
+  background-color: #a81f8d;
+}
+
+/* Active sidebar */
+#sidebar.active {
+  left: 0;
+}
