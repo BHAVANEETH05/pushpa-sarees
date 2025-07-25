@@ -1,12 +1,14 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-image: url('https://i.postimg.cc/J0532L4h/designer-sarees-diwali-background-962764-24909.avif'); /* Use a floral pattern */
+  background-image: url('https://i.postimg.cc/J0532L4h/designer-sarees-diwali-background-962764-24909.avif');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
   color: #2b2b2b;
 }
+
 
 .bg-overlay {
   background-color: rgba(255, 255, 255, 0.95);
