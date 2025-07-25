@@ -134,3 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProducts(products, "productGrid", "product-card");
   renderProducts(cottons, "cottonsGrid", "cottons-card");
 });
+// Sidebar toggle logic
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts(products, "productGrid", "product-card");
+  renderProducts(cottons, "cottonsGrid", "cottons-card");
+
+  const sidebarToggle = document.getElementById("sidebar-toggle");
+  const sidebar = document.getElementById("sidebar");
+
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+  });
+});
