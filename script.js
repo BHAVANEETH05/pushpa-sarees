@@ -121,11 +121,12 @@ function renderProducts(list, containerId, cardClass) {
   });
 }
 
-// ✅ Only ONE DOMContentLoaded handler
 document.addEventListener("DOMContentLoaded", () => {
+  // Render products only once
   renderProducts(products, "productGrid", "product-card");
   renderProducts(cottons, "cottonsGrid", "cottons-card");
 
+  // Sidebar toggle logic
   const sidebarToggle = document.getElementById("sidebar-toggle");
   const sidebar = document.getElementById("sidebar");
 
