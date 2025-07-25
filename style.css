@@ -8,7 +8,16 @@ body {
   background-position: center;
   color: #2b2b2b;
 }
-
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity here */
+  z-index: -1;
+}
 
 .bg-overlay {
   background-color: rgba(255, 255, 255, 0.95);
