@@ -1,4 +1,3 @@
-// Sample products — add your own products here
 const products = [
   {
     name: "Sky blue kalamkari silk saree",
@@ -15,7 +14,6 @@ const products = [
     price: "₹1,699",
     image: "https://i.postimg.cc/V69fRW9v/Untitled-design.png",
   }, 
-   
   {
     name: "Voilet kalamkari silk saree",
     price: "₹1,699",
@@ -53,8 +51,6 @@ const products = [
   },
 ];
 
-
-
 const cottons = [
   {
     name: "Meena Cotton saree (Blue)",
@@ -66,10 +62,7 @@ const cottons = [
     price: "₹850",
     image: "https://i.postimg.cc/KYHnBbVY/Untitled-design-2.png"
   },
-
-
-  ];
-
+];
 
 const cart = [];
 
@@ -104,7 +97,7 @@ function checkout() {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
   const fullMessage = `Hello, I would like to order:\n\n${message}\n\nTotal: ₹${total}`;
-  const whatsappNumber = "916281013399"; // Replace with your number
+  const whatsappNumber = "916281013399";
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMessage)}`;
 
   window.open(whatsappURL, "_blank");
@@ -113,11 +106,9 @@ function checkout() {
   updateCartDisplay();
 }
 
-// Renders products with "Add to Cart" buttons
 function renderProducts(list, containerId, cardClass) {
   const grid = document.getElementById(containerId);
   list.forEach(product => {
-    const priceValue = product.price.replace("₹", "").replace(",", "");
     const card = document.createElement("div");
     card.className = cardClass;
     card.innerHTML = `
@@ -130,11 +121,7 @@ function renderProducts(list, containerId, cardClass) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderProducts(products, "productGrid", "product-card");
-  renderProducts(cottons, "cottonsGrid", "cottons-card");
-});
-// Sidebar toggle logic
+// ✅ Only ONE DOMContentLoaded handler
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts(products, "productGrid", "product-card");
   renderProducts(cottons, "cottonsGrid", "cottons-card");
