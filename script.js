@@ -13,7 +13,7 @@ const products = [
     name: "Orange Semi paithani silk saree",
     price: "₹1,699",
     image: "https://i.postimg.cc/V69fRW9v/Untitled-design.png",
-  }, 
+  },
   {
     name: "Voilet kalamkari silk saree",
     price: "₹1,699",
@@ -111,6 +111,7 @@ function renderProducts(list, containerId, cardClass) {
   list.forEach(product => {
     const card = document.createElement("div");
     card.className = cardClass;
+    card.setAttribute("data-aos", "zoom-in"); // Add animation here
     card.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
@@ -122,11 +123,9 @@ function renderProducts(list, containerId, cardClass) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Render products only once
   renderProducts(products, "productGrid", "product-card");
   renderProducts(cottons, "cottonsGrid", "cottons-card");
 
-  // Sidebar toggle logic
   const sidebarToggle = document.getElementById("sidebar-toggle");
   const sidebar = document.getElementById("sidebar");
 
