@@ -111,12 +111,13 @@ function renderProducts(list, containerId, cardClass) {
   list.forEach(product => {
     const card = document.createElement("div");
     card.className = cardClass;
-    card.setAttribute("data-aos", "zoom-in"); // Add animation here
+    card.setAttribute("data-aos", "zoom-in");
+
     card.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>${product.price}</p>
-      <button onclick="addToCart('${product.name}', '${product.price}')">Add to Cart</button>
+      <button class="animated-btn glow-on-hover" onclick="addToCart('${product.name}', '${product.price}')" data-aos="fade-up" data-aos-delay="100">Add to Cart</button>
     `;
     grid.appendChild(card);
   });
