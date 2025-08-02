@@ -248,26 +248,6 @@ footer {
     box-shadow: 0 0 0 rgba(208, 39, 171, 0.6);
   }
 }
-/* Full-length hero image */
-.hero-image {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-}
 
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  width: auto;
-  max-height: 500px;
-  object-fit: cover;
-}
 
-@media (max-width: 768px) {
-  .hero-image img {
-    max-height: 300px;
-  }
-}
 
